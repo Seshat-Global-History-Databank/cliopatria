@@ -1,8 +1,6 @@
 # Visualise Cliopatria shape dataset
 
-Cliopatria is the shape dataset used by the Seshat Global History Databank website. It can also be explored in a local Jupyter notebook running on your local machine by following these instructions.
-
-<!-- TODO: Add download link for Cliopatria -->
+You can explore the Cliopatria dataset in an interactive Jupyter notebook. This folder contains a processing script to add colors to the dataset, alongside a notebook which loads the data in GeoPandas and includes an interactive Folium plot.
 
 1. Ensure you have a working installation of Python 3 and Conda. If not, [download Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html), which should give you both
     - Note: you can use a different tool for creating a Python virtual environment than conda (e.g. venv) if you prefer
@@ -15,7 +13,6 @@ Cliopatria is the shape dataset used by the Seshat Global History Databank websi
             pip install -r requirements.txt
             python -m ipykernel install --user --name=cliopatria --display-name="Python (cliopatria)"
         ```
-    - Note: This will install Geopandas 0.13.2, but if you [install from source](https://geopandas.org/en/stable/getting_started/install.html#installing-from-source) it's much faster with version 1.0.0 (unreleased on pip as of 18th June 2024)
 
 3. Open the `cliopatria.ipynb` notebook with Jupyter (or another application that can run notebooks such as VSCode).
     - `jupyter lab` (or `jupyter notebook`)
