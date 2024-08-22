@@ -32,34 +32,26 @@ If you wish to edit Cliopatria and make a new release, do the following:
         git clone https://github.com/Seshat-Global-History-Databank/cliopatria
     ```
 
-2. Save over `cliopatria.geojson` with your new version of the file. If wish to check the new version, you can inspect it in the Jupyter interactive plot (see [here](./notebooks)).
+2. Unzip `cliopatria.geojson.zip` to get `cliopatria.geojson` and make the relevant modifications for the new release. If wish to check the new version, you can inspect it in the Jupyter interactive plot (see [here](./notebooks)).
 
-3. Decide on a new version number based on the numbering system decided above.
+3. Rezip the file and save it over `cliopatria.geojson.zip`. 
 
-4. Enter the repo, create a new branch named according to the version number (e.g. v1.0.0) and commit the geojson with an informative commit message:
+4. Decide on a new version number based on the numbering system decided above.
 
-    ```
-        cd cliopatria
-        git checkout -b vX.X.X
-        git add cliopatria.geojson
-        git commit -m 'Adjusts duration of Roman Empire polygons'
-    ```
-    Note: you could make multiple commits for separate edits if appropriate.
-
-5. Once you have finished making commits, make a tag (which will point to the last commit):
+5. Commit the zip file with an informative commit message and create a tag with the version number:
 
     ```
-       git tag -a vX.X.X
+        git add cliopatria.geojson.zip
+        git commit -m 'Update to vX.X.X'
+        git tag vX.X.X
     ``` 
 
-6. Push your new branch (and tag) to GitHub:
+6. Push your updated zip file and the tag to GitHub:
 
     ```
-        git push --set-upstream origin vX.X.X --follow-tags
+        git push
+        git push origin vX.X.X
     ```
-    Note: you only need to include `--set-upstream origin vX.X.X` the first time you push a branch.
 
-7. Open a pull request on GitHub from the `vX.X.X` branch to `main`. You can request reviews from other maintainers if needed.
-
-8. Once any reviewers are happy, merge the pull request. A release will be created on GitHub and should be visible on the right hand side. The linked Zenodo will also get updated with the latest release.
+7. On GitHub, click "Releases" (on the right of this page). Choose the tag you created and name the release the same i.e. `vX.X.X`. Enter any relevant info describing the changes in the release. The linked Zenodo will automatically get updated with the latest release.
 

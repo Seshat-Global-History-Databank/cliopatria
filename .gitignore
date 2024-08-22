@@ -163,3 +163,7 @@ cython_debug/
 
 # Mac
 .DS_Store
+
+# Cliopatria
+cliopatria.geojson
+cliopatria_seshat_processed.geojson
