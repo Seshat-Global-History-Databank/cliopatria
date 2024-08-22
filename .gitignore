@@ -166,3 +166,4 @@ cython_debug/
 
 # Cliopatria
 cliopatria.geojson
+cliopatria_seshat_processed.geojson
