@@ -1,0 +1,6 @@
+jupyter==1.0.0
+ipykernel==6.29.3
+geopandas==0.13.2
+contextily==1.6.0
+folium==0.16.0
+distinctipy==1.2.3
