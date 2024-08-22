@@ -2,8 +2,12 @@
 
 Cliopatria is a comprehensive open-source geospatial dataset of worldwide states, political groups, events, and rulers from 3400BCE to 2024CE. It is part of the Seshat Global History Databank project.
 
+*The [Seshat Global History Databank](https://seshat-db.com/) will soon feature Cliopatria. For now, you can see how it will be used on our test site:*
+
+* *[Seshat World Map](https://seshatdata.com/core/world_map)*
+* *[Seshat Polity Pages](https://seshatdata.com/core/polity/71) (Roman Empire - Dominate)*
+
 **TODO:** Links to:
-- Seshat world map, example polity pages
 - Seshat website disclaimer on historical borders text
 - Zenodo
 
