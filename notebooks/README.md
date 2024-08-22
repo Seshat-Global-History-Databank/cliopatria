@@ -14,7 +14,12 @@ You can explore the Cliopatria dataset in an interactive Jupyter notebook. This 
             python -m ipykernel install --user --name=cliopatria --display-name="Python (cliopatria)"
         ```
 
-3. Open the `cliopatria.ipynb` notebook with Jupyter (or another application that can run notebooks such as VSCode).
-    - `jupyter lab` (or `jupyter notebook`)
-    - Note: make sure the notebook Python kernel is using the virtual environment you created (click top right)
-4. Follow the instructions in the notebook.
+3. You can then open the notebook with Jupyter (or another application that can run notebooks such as VSCode). First open the Jupyter notebook application:
+    ```
+        jupyter notebook
+    ```
+    - Note: if Jupyter wants to to set a password, use `Ctrl-C` to escape and run `jupyter notebook --generate-config` before running `jupyter notebook` again and entering a blank password.
+
+4. From the Jupyter notebook interface in your browser, open `cliopatria.ipynb` and choose the Kernel that you created called `Python (cliopatria)` in the top right.
+
+5. Follow the instructions in the notebook.
