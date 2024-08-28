@@ -1,5 +1,13 @@
 # Cliopatria
 
+- [About the project](#about-the-project)
+- [Data description](#data-description)
+- [Visualising Cliopatria](#visualising-cliopatria)
+- [Releases](#releases)
+- [Making a release](#making-a-release)
+
+## About the project
+
 Cliopatria is a comprehensive open-source geospatial dataset of worldwide states, political groups, events, and rulers from 3400BCE to 2024CE.  It is part of the [Seshat Global History Databank](https://seshatdatabank.info/) project.  Presently it comprises over 1800 political entities sampled at varying timesteps and spatial scales. Description of its initial format, construction, and source material may be found [here](https://osf.io/preprints/socarxiv/24wd6).  Released versions may be accessed here or [on Zenodo](https://zenodo.org/records/13363121).
 
 *The [Seshat Global History Databank](https://seshat-db.com/) will soon feature Cliopatria. For now, you can see how it will be used on our test site:*
@@ -11,9 +19,7 @@ While we strive to reflect the most current historical knowledge, we acknowledge
 
 Please note that users and analysts of this map data are solely responsible for assessing its suitability for their specific purposes.
 
-## Exploring Cliopatria
-
-You can explore the Cliopatria dataset in an interactive Jupyter notebook. The [notebooks](./notebooks) folder contains a processing script to add colors to the dataset, alongside a notebook which loads the data in GeoPandas and includes an interactive Folium plot.
+## Data description
 
 Cliopatria is distributed as a single data file, `cliopatria.geojson` (stored as a zip here due to GitHub's file size constraints).
 This file currently consists of approximately 15K records.
@@ -28,6 +34,12 @@ Each row also records an associated **Wikipedia** page (phrase) describing the e
 For certain polities in particular years, an associated Seshat polity id (**SeshatID**) may be provided; access to
 the structured data about that polity can be found via the URL `“http://seshat-db.org/core/polity/<polity
 id>”`.
+
+## Visualising Cliopatria
+
+You can explore the Cliopatria dataset in an interactive Jupyter notebook. The [notebooks](./notebooks) folder contains a processing script to add colors to the dataset, alongside a notebook which loads the data in GeoPandas and includes an interactive Folium plot.
+
+You can also explore Cliopatria on the Seshat website (see links [above](#about-the-project)).
 
 ## Releases
 
