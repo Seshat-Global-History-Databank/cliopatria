@@ -89,3 +89,4 @@ If you wish to edit Cliopatria and make a new release, do the following:
 
 7. On GitHub, click "Releases" (on the right of this page). Choose the tag you created and name the release the same i.e. `vX.X.X`. Enter any relevant info describing the changes in the release. The linked [Zenodo](https://zenodo.org/records/13363121) will automatically get updated with the latest release.
 
+After making a new release, you may wish to update the Seshat website with the latest version of Cliopatria. Contact a `Seshat Admin` who can follow [these instructions](https://seshat-global-history-databank.github.io/seshat/admin/setup/spatialdb.html#cliopatria-shape-dataset).
