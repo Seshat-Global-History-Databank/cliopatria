@@ -4,7 +4,8 @@
 - [Data description](#data-description)
 - [Visualising Cliopatria](#visualising-cliopatria)
 - [Releases](#releases)
-- [Making a release](#making-a-release)
+- [Maintainer docs](#maintainer-docs)
+    - [Making a release](#making-a-release)
 
 ## About the project
 
@@ -51,7 +52,11 @@ Whenever updates are made to `cliopatria.geojson`, a new release is made accordi
 
 Past releases can be found on the right hand side of this page.
 
-## Making a release
+## Maintainer docs
+
+Information below is relevant to maintainers of the Cliopatria repo.
+
+### Making a release
 
 If you wish to edit Cliopatria and make a new release, do the following:
 
