@@ -1,6 +1,15 @@
 # Cliopatria
 
-Cliopatria is a comprehensive open-source geospatial dataset of worldwide states, political groups, events, and rulers from 3400BCE to 2024CE.  It is part of the [Seshat Global History Databank](https://seshatdatabank.info/) project.  Presently it comprises over 1800 political entities sampled at varying timesteps and spatial scales. Description of its initial format, construction, and source material may be found [here: socarxiv, then Nature].  Released versions may be accessed here or [on Zenodo](https://zenodo.org/records/13363121).
+- [About the project](#about-the-project)
+- [Data description](#data-description)
+- [Visualising Cliopatria](#visualising-cliopatria)
+- [Releases](#releases)
+- [Maintainer docs](#maintainer-docs)
+    - [Making a release](#making-a-release)
+
+## About the project
+
+Cliopatria is a comprehensive open-source geospatial dataset of worldwide states, political groups, events, and rulers from 3400BCE to 2024CE.  It is part of the [Seshat Global History Databank](https://seshatdatabank.info/) project.  Presently it comprises over 1800 political entities sampled at varying timesteps and spatial scales. Description of its initial format, construction, and source material may be found [here](https://osf.io/preprints/socarxiv/24wd6).  Released versions may be accessed here or [on Zenodo](https://zenodo.org/records/13363121).
 
 *The [Seshat Global History Databank](https://seshat-db.com/) will soon feature Cliopatria. For now, you can see how it will be used on our test site:*
 
@@ -11,9 +20,27 @@ While we strive to reflect the most current historical knowledge, we acknowledge
 
 Please note that users and analysts of this map data are solely responsible for assessing its suitability for their specific purposes.
 
-## Exploring Cliopatria
+## Data description
+
+Cliopatria is distributed as a single data file, `cliopatria.geojson` (stored as a zip here due to GitHub's file size constraints).
+This file currently consists of approximately 15K records.
+Data for each entity (e.g., 'Roman Empire') is contained in one or more rows, depending on how the associated data about the entity changes.
+Each row reports the **Name** of the entity, its polygons (**geometry**, projection EPSG:4326), that geometry's **Area** (in KM<sup>2</sup> using equal-area projection EPSG:6933), and its **Type** (POLITY, LEADER, etc.).
+
+Each row indicates a range of years between **FromYear** to **ToYear** to which the associated row data applies.
+Years are recorded as integers, negative for BCE, positive for CE.
+Data, including polygons, for any entity for any year (not just movie frame years) between 3400BCE and 2024CE can be obtained finding the row (if any) containing the **Name** of the entity where the year of interest is between the row’s **FromYear** and **ToYear**, inclusive.
+
+Each row also records an associated **Wikipedia** page (phrase) describing the entity in those years; the latter URL can be composed by embedding the phrase in ``“http://en.wikipedia.org/<phrase>”``.
+For certain polities in particular years, an associated Seshat polity id (**SeshatID**) may be provided; access to
+the structured data about that polity can be found via the URL `“http://seshat-db.org/core/polity/<polity
+id>”`.
+
+## Visualising Cliopatria
 
 You can explore the Cliopatria dataset in an interactive Jupyter notebook. The [notebooks](./notebooks) folder contains a processing script to add colors to the dataset, alongside a notebook which loads the data in GeoPandas and includes an interactive Folium plot.
+
+You can also explore Cliopatria on the Seshat website (see links [above](#about-the-project)).
 
 ## Releases
 
@@ -25,7 +52,11 @@ Whenever updates are made to `cliopatria.geojson`, a new release is made accordi
 
 Past releases can be found on the right hand side of this page.
 
-## Making a release
+## Maintainer docs
+
+Information below is relevant to maintainers of the Cliopatria repo.
+
+### Making a release
 
 If you wish to edit Cliopatria and make a new release, do the following:
 
@@ -58,3 +89,4 @@ If you wish to edit Cliopatria and make a new release, do the following:
 
 7. On GitHub, click "Releases" (on the right of this page). Choose the tag you created and name the release the same i.e. `vX.X.X`. Enter any relevant info describing the changes in the release. The linked [Zenodo](https://zenodo.org/records/13363121) will automatically get updated with the latest release.
 
+After making a new release, you may wish to update the Seshat website with the latest version of Cliopatria. Contact a `Seshat Admin` who can follow [these instructions](https://seshat-global-history-databank.github.io/seshat/admin/setup/spatialdb.html#cliopatria-shape-dataset).
