@@ -13,7 +13,7 @@ You can explore the Cliopatria dataset in an interactive Jupyter notebook. This 
 3. Navigate to the cloned repo and set up the required virtual environment, install packages into it and create a jupyter kernel.
     - Conda example:
         ```
-            cd cliopatria
+            cd cliopatria/notebooks
             conda create --name cliopatria python=3.11
             conda activate cliopatria
             pip install -r requirements.txt
