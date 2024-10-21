@@ -2,7 +2,7 @@
 
 You can explore the Cliopatria dataset in an interactive Jupyter notebook. This folder contains a processing script to add colors to the dataset, alongside a notebook which loads the data in GeoPandas and includes an interactive Folium plot.
 
-1. Ensure you have a working installation of Python 3 and Conda. If not, [download Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html), which should give you both
+1. Ensure you have a working installation of Python 3 and Conda. If not, [download Anaconda](https://seshat-global-history-databank.github.io/seshat/software-tools.html#python-anaconda), which should give you both
     - Note: you can use a different tool for creating a Python virtual environment than conda (e.g. venv) if you prefer
 
 2. Clone this GitHub repository
