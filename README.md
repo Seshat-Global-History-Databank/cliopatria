@@ -44,7 +44,7 @@ You can explore the Cliopatria dataset in an interactive Jupyter notebook. The [
 
 ```
     pip install -r notebooks/requirements.txt
-    python convert_data.py cliopatria.geojson
+    python notebooks/convert_data.py cliopatria.geojson
 ```
 
 You can also explore Cliopatria on the Seshat website (see links [above](#about-the-project)).
