@@ -38,7 +38,14 @@ id>”`.
 
 ## Visualising Cliopatria
 
-You can explore the Cliopatria dataset in an interactive Jupyter notebook. The [notebooks](./notebooks) folder contains a processing script to add colors to the dataset, alongside a notebook which loads the data in GeoPandas and includes an interactive Folium plot.
+You can explore the Cliopatria dataset in an interactive Jupyter notebook. The [notebooks](./notebooks) folder contains a processing script to add colors to the dataset, alongside a notebook which loads the data in GeoPandas and includes an interactive Folium plot. This folder includes complete instructions for Python/GitHub beginners including setting up a virtual environment and cloning the repo. If you just want to add the colors to the GeoJSON, follow the instructions below.
+
+**Quick start instructions for adding colors to the GeoJSON (after unzipping):**
+
+```
+    pip install -r notebooks/requirements.txt
+    python convert_data.py cliopatria.geojson
+```
 
 You can also explore Cliopatria on the Seshat website (see links [above](#about-the-project)).
 
