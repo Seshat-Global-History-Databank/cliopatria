@@ -9,9 +9,9 @@
 
 ## About the project
 
-Cliopatria is a comprehensive open-source geospatial dataset of worldwide states, political groups, events, and rulers from 3400BCE to 2024CE.  It is part of the [Seshat Global History Databank](https://seshatdatabank.info/) project.  Presently it comprises over 1800 political entities sampled at varying timesteps and spatial scales. Description of its initial format, construction, and source material may be found [here](https://osf.io/preprints/socarxiv/24wd6).  Released versions may be accessed here or [on Zenodo](https://zenodo.org/records/13363121).
+Cliopatria is a comprehensive open-source geospatial dataset of worldwide polities from 3400BCE to 2024CE.  It is part of the [Seshat Global History Databank](https://seshatdatabank.info/) project.  Presently it comprises over 1800 political entities sampled at varying timesteps and spatial scales. Description of its initial format, construction, and source material may be found [here](https://osf.io/preprints/socarxiv/24wd6).  Released versions may be accessed here or [on Zenodo](https://zenodo.org/records/13363121).
 
-*The [Seshat Global History Databank](https://seshat-db.com/) will features Cliopatria:*
+*The [Seshat Global History Databank](https://seshat-db.com/) features Cliopatria:*
 
 * *[Seshat World Map](https://seshat-db.com/core/world_map)*
 * *[Seshat Polity Pages](https://seshat-db.com/core/polity/71) (Roman Empire - Dominate)*
@@ -25,11 +25,11 @@ Please note that users and analysts of this map data are solely responsible for 
 Cliopatria is distributed as a single data file, `cliopatria.geojson` (stored as a zip here due to GitHub's file size constraints).
 This file currently consists of approximately 15K records.
 Data for each entity (e.g., 'Roman Empire') is contained in one or more rows, depending on how the associated data about the entity changes.
-Each row reports the **Name** of the entity, its polygons (**geometry**, projection EPSG:4326), that geometry's **Area** (in KM<sup>2</sup> using equal-area projection EPSG:6933), and its **Type** (POLITY, LEADER, etc.).
+Each row reports the **Name** of the entity, its polygons (**geometry**, projection EPSG:4326), that geometry's **Area** (in KM<sup>2</sup> using equal-area projection EPSG:6933), and its **Type** (POLITY).
 
 Each row indicates a range of years between **FromYear** to **ToYear** to which the associated row data applies.
 Years are recorded as integers, negative for BCE, positive for CE.
-Data, including polygons, for any entity for any year (not just movie frame years) between 3400BCE and 2024CE can be obtained finding the row (if any) containing the **Name** of the entity where the year of interest is between the row’s **FromYear** and **ToYear**, inclusive.
+Data, including polygons, for any entity for any year between 3400BCE and 2024CE can be obtained finding the row (if any) containing the **Name** of the entity where the year of interest is between the row’s **FromYear** and **ToYear**, inclusive.
 
 Each row also records an associated **Wikipedia** page (phrase) describing the entity in those years; the latter URL can be composed by embedding the phrase in ``“http://en.wikipedia.org/<phrase>”``.
 For certain polities in particular years, an associated Seshat polity id (**SeshatID**) may be provided; access to
@@ -73,11 +73,11 @@ If you wish to edit Cliopatria and make a new release, do the following:
         git clone https://github.com/Seshat-Global-History-Databank/cliopatria
     ```
 
-2. Unzip `cliopatria.geojson.zip` to get `cliopatria.geojson` and make the relevant modifications for the new release. If wish to check the new version, you can inspect it in the Jupyter interactive plot (see [here](./notebooks)).
+2. Unzip `cliopatria.geojson.zip` to get `cliopatria.geojson` and make the relevant modifications for the new release. If you wish to check the new version, you can inspect it in the Jupyter interactive plot (see [here](./notebooks)).
 
-3. Rezip the file and save it over `cliopatria.geojson.zip`. 
+3. Rezip the file and resave it to `cliopatria.geojson.zip`. 
 
-4. Decide on a new version number based on the numbering system decided above.
+4. Decide on a new version number based on the numbering system outlined above.
 
 5. Commit the zip file with an informative commit message and create a tag with the version number:
 
