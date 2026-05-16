@@ -23,18 +23,21 @@ Please note that users and analysts of this map data are solely responsible for 
 ## Data description
 
 Cliopatria is distributed as a single data file, `cliopatria.geojson` (stored as a zip here due to GitHub's file size constraints).
-This file currently consists of approximately 15K records.
+This file currently consists of approximately 14K records.
 Data for each entity (e.g., 'Roman Empire') is contained in one or more rows, depending on how the associated data about the entity changes.
-Each row reports the **Name** of the entity, its polygons (**geometry**, projection EPSG:4326), that geometry's **Area** (in km<sup>2</sup> using equal-area projection EPSG:6933), and its **Type** (POLITY).
+Each row reports the **Name** of the entity, its polygons (**geometry**, projection EPSG:4326), that geometry's **Area** (in km<sup>2</sup> using equal-area projection EPSG:6933), and its **Type** (POLITY or RELATION).
 
 Each row indicates a range of years between **FromYear** to **ToYear** to which the associated row data applies.
 Years are recorded as integers, negative for BCE, positive for CE.
 Data, including polygons, for any entity for any year between 3400BCE and 2024CE can be obtained finding the row (if any) containing the **Name** of the entity where the year of interest is between the row’s **FromYear** and **ToYear**, inclusive.
 
-Each row also records an associated **Wikipedia** page (phrase) describing the entity in those years; the latter URL can be composed by embedding the phrase in ``“http://en.wikipedia.org/<phrase>”``.
+Each row records an associated **Wikipedia** page (phrase) describing the entity in those years; the URL can be composed by embedding the phrase in ``“http://en.wikipedia.org/<phrase>”``.
+Each row records an associated **Wikidata** id for the entity in those years; the URL to access the associated structured data can be composed by embedding the id in ``“http://wikidata.org/wiki/<id>”``.
 For certain polities in particular years, an associated Seshat polity id (**SeshatID**) may be provided; access to
-the structured data about that polity can be found via the URL `“http://seshat-db.org/core/polity/<polity
-id>”`.
+the structured data about that polity can be found via the URL `“http://seshat-db.org/core/polity/<polity id>”`.
+
+An initial set of associated Wikidata ids were kindly supplied by Charles de Dampierre [Bunka.ai](http://Bunka.ai) and Nicolas Baumard,
+Institut Jean Nicod, Département d’études cognitives, École normale supérieure, Université PSL, EHESS, CNRS, 75005 Paris, France.
 
 ## Visualising Cliopatria
 
