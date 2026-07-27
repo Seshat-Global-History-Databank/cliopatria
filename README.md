@@ -9,7 +9,7 @@
 
 ## About the project
 
-Cliopatria is a comprehensive open-source geospatial dataset of worldwide polities from 3400BCE to 2024CE.  It is part of the [Seshat Global History Databank](https://seshatdatabank.info/) project.  Presently it comprises over 1600 political entities sampled at varying timesteps and spatial scales. Description of its initial format, construction, and source material may be found [here](https://osf.io/preprints/socarxiv/24wd6).  Released versions may be accessed here or [on Zenodo](https://zenodo.org/records/13363121).
+Cliopatria is a comprehensive open-source geospatial dataset of worldwide polities from 3400BCE to 2024CE.  It is part of the [Seshat Global History Databank](https://seshatdatabank.info/) project.  Presently it comprises over 1600 political entities sampled at varying timesteps and spatial scales. Description of its initial format, construction, and source material may be found [here](https://doi.org/10.1038/s41597-025-04516-9).  Released versions may be accessed here or [on Zenodo](https://zenodo.org/records/13363121).
 
 *The [Seshat Global History Databank](https://seshat-db.com/) features Cliopatria:*
 
@@ -97,6 +97,6 @@ If you wish to edit Cliopatria and make a new release, do the following:
         git push origin vX.X.X
     ```
 
-7. On GitHub, click "Releases" (on the right of this page). Choose the tag you created and name the release the same i.e. `vX.X.X`. Enter any relevant info describing the changes in the release. The linked [Zenodo](https://zenodo.org/records/13363121) will automatically get updated with the latest release.
+7. On GitHub, click "Releases" (on the right of this page). Choose the tag you created and name the release the same i.e. `vX.X.X`. Enter any relevant info describing the changes in the release. The linked [Zenodo](https://zenodo.org/records/13363121) will automatically get updated with the latest release.  Ensure the Cliopatria github credentials associated with the Zenodo account have been refreshed before making the github release.
 
 After making a new release, you may wish to update the Seshat website with the latest version of Cliopatria. Contact a `Seshat Admin` who can follow [these instructions](https://seshat-global-history-databank.github.io/seshat/admin/setup/spatialdb.html#cliopatria-shape-dataset).
